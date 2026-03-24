@@ -166,14 +166,14 @@ img {
 }
 
 .logo-img {
-    height: 50px;
+    height: 90px;
     transition: var(--transition);
     filter: brightness(0) invert(1); /* Keep it white initially if over dark hero */
 }
 
 .navbar.scrolled .logo-img {
     filter: none; /* Restore original colors on scroll */
-    height: 40px;
+    height: 60px;
 }
 
 .nav-links {
@@ -640,7 +640,7 @@ section {
 }
 
 .footer-logo {
-    height: 50px;
+    height: 90px;
     filter: brightness(0) invert(1);
 }
 
