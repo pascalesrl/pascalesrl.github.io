@@ -527,7 +527,7 @@ section {
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)), url('https://images.unsplash.com/photo-1542013936693-884638332954?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover fixed;
+    background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)), url('../public/tronchi.jpg') center/cover fixed;
     color: var(--white);
     padding: 120px 0;
 }
