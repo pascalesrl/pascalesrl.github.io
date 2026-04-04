@@ -4,7 +4,8 @@
 */
 
 :root {
-    --primary: #E65100; /* Deep industrial orange */
+    --primary: #E65100;
+    /* Deep industrial orange */
     --primary-light: #FF833A;
     --primary-dark: #A33900;
     --text-dark: #1A1A1A;
@@ -13,9 +14,9 @@
     --white: #FFFFFF;
     --black: #000000;
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
-    --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
-    --shadow-lg: 0 20px 40px rgba(0,0,0,0.12);
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
 /* Reset & Base */
@@ -37,7 +38,12 @@ body {
     background-color: var(--white);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
     line-height: 1.2;
@@ -143,7 +149,6 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 0;
     z-index: 1000;
     transition: var(--transition);
     background: transparent;
@@ -152,8 +157,51 @@ img {
 .navbar.scrolled {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    padding: 10px 0;
+    padding: 0;
     box-shadow: var(--shadow-sm);
+}
+
+.navbar-top-info {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    background: var(--primary);
+    color: var(--white);
+    transition: all 0.4s ease;
+}
+
+.navbar.scrolled .navbar-top-info {
+    max-height: 50px;
+    opacity: 1;
+}
+
+.top-info-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 8px 5%;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.top-info-container .info-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.top-info-container .info-item i {
+    width: 14px;
+    height: 14px;
+}
+
+.navbar-main-content {
+    padding: 10px 0;
+    transition: var(--transition);
+}
+
+.navbar:not(.scrolled) .navbar-main-content {
+    padding: 20px 0;
 }
 
 .nav-container {
@@ -166,14 +214,14 @@ img {
 }
 
 .logo-img {
-    height: 90px;
+    height: 110px;
     transition: var(--transition);
-    filter: brightness(0) invert(1); /* Keep it white initially if over dark hero */
+    filter: brightness(0) invert(1);
 }
 
 .navbar.scrolled .logo-img {
-    filter: none; /* Restore original colors on scroll */
-    height: 60px;
+    filter: none;
+    height: 70px;
 }
 
 .nav-links {
@@ -184,7 +232,8 @@ img {
 
 .nav-link {
     font-weight: 500;
-    color: var(--white); /* White for hero overlay */
+    color: var(--white);
+    /* White for hero overlay */
     font-size: 1rem;
     position: relative;
 }
@@ -214,9 +263,11 @@ img {
     padding: 10px 20px;
     border-radius: 4px;
 }
+
 .btn-contact::after {
     display: none;
 }
+
 .btn-contact:hover {
     background-color: var(--primary-dark);
     transform: translateY(-2px);
@@ -229,6 +280,7 @@ img {
     color: var(--white);
     cursor: pointer;
 }
+
 .navbar.scrolled .mobile-toggle {
     color: var(--text-dark);
 }
@@ -259,7 +311,8 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.05); /* Slight zoom for smoother parallax */
+    transform: scale(1.05);
+    /* Slight zoom for smoother parallax */
 }
 
 .overlay {
@@ -327,6 +380,31 @@ section {
 .about-img {
     border-radius: 8px;
     box-shadow: var(--shadow-lg);
+}
+
+.about-slider {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--bg-light);
+    aspect-ratio: 4/3;
+}
+
+.about-slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.about-slider .slide.active {
+    opacity: 1;
 }
 
 .experience-badge {
@@ -405,71 +483,87 @@ section {
     gap: 10px;
 }
 
-/* Certifications */
-.cert-list {
-    margin-top: 2rem;
-}
-
-.cert-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.icon-box-small {
-    width: 40px;
-    height: 40px;
-    background: var(--primary);
-    color: var(--white);
-    border-radius: 8px;
+/* Certifications Cards */
+.cert-card {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.cert-list strong {
-    display: block;
-    margin-bottom: 0.2rem;
-    color: var(--text-dark);
-}
-
-.cert-list p {
-    font-size: 0.95rem;
-    color: var(--text-light);
-}
-
-/* Logos Grid */
-.logos-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    align-items: center;
-}
-
-.logo-item {
     background: var(--white);
-    padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: var(--shadow-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 140px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 2.5rem;
+    overflow: hidden;
     transition: var(--transition);
 }
 
-.logo-item:hover {
+.cert-card:hover {
+    box-shadow: var(--shadow-lg);
     transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
 }
 
-.logo-item img {
-    max-height: 90px;
+.cert-card-img {
+    flex: 0 0 280px;
+    padding: 2.5rem;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 220px;
+    align-self: stretch;
+    border-right: 1px solid #E0E0E0;
+}
+
+.cert-card-img img {
+    max-height: 120px;
     width: auto;
     max-width: 100%;
     object-fit: contain;
+}
+
+.cert-card-text {
+    flex: 1;
+    padding: 2.5rem;
+}
+
+.cert-card-text h3 {
+    font-size: 1.75rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.cert-card-text p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.cert-card-text h4 {
+    font-size: 1.15rem;
+    margin: 1.5rem 0 0.8rem;
+    color: var(--text-dark);
+}
+
+.cert-card-text ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.cert-card-text ul li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.cert-card-text ul li::before {
+    content: "•";
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: -2px;
 }
 
 /* Services / Products Section */
@@ -544,7 +638,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -698,8 +792,9 @@ section {
 }
 
 .footer-logo {
-    height: 90px;
+    height: 130px;
     filter: brightness(0) invert(1);
+    margin-top: -35px; /* Aligned with h4 headers */
 }
 
 .footer h4 {
@@ -724,14 +819,18 @@ section {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 24px 0;
     text-align: center;
     color: #A0A0A0;
 }
 
 /* Animations */
-.reveal-text, .reveal-fade, .reveal-slide-left, .reveal-slide-right, .reveal-scale {
+.reveal-text,
+.reveal-fade,
+.reveal-slide-left,
+.reveal-slide-right,
+.reveal-scale {
     opacity: 0;
     visibility: hidden;
 }
@@ -762,54 +861,114 @@ section {
     animation: scaleIn 0.8s ease forwards;
 }
 
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes slideInLeft {
-    from { opacity: 0; transform: translateX(-50px); }
-    to { opacity: 1; transform: translateX(0); }
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes slideInRight {
-    from { opacity: 0; transform: translateX(50px); }
-    to { opacity: 1; transform: translateX(0); }
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes scaleIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 
+
+@media (max-width: 1200px) {
+    .contact-hours {
+        display: none;
+    }
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
 /* Responsive */
 @media (max-width: 992px) {
-    .section-title { font-size: 2rem; }
+    .section-title {
+        font-size: 2rem;
+    }
+
     .section-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
+
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+
     .experience-badge {
         width: 120px;
         height: 120px;
         bottom: -15px;
         right: 0;
     }
-    .experience-badge .number { font-size: 2rem; }
+
+    .experience-badge .number {
+        font-size: 2rem;
+    }
+
     .hero-actions {
         flex-direction: column;
     }
@@ -819,6 +978,11 @@ section {
     .mobile-toggle {
         display: block;
     }
+
+    .nav-contact-block {
+        display: none !important;
+    }
+
     .nav-links {
         position: absolute;
         top: 100%;
@@ -831,16 +995,39 @@ section {
         box-shadow: var(--shadow-md);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         transition: clip-path 0.4s ease-in-out;
+        transform: none; /* Reset centering transform on mobile */
     }
+
     .nav-links.active {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
+
     .nav-link {
         color: var(--text-dark);
         font-size: 1.2rem;
     }
+
     .navbar .logo-img {
-        filter: none; /* Always visible on mobile if background is white dropdown */
+        filter: none;
+        /* Always visible on mobile if background is white dropdown */
     }
+
     /* Unless scrolled */
+}
+
+@media (max-width: 768px) {
+    .cert-card {
+        flex-direction: column;
+    }
+
+    .cert-card-img {
+        flex: auto;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #E0E0E0;
+    }
+
+    .cert-card-text {
+        padding: 1.5rem;
+    }
 }

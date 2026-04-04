@@ -61,4 +61,15 @@ document.addEventListener('DOMContentLoaded', () => {
             heroBg.style.transform = `translateY(${scrolled * 0.4}px) scale(1.05)`;
         }
     });
+
+    // 6. About Slider
+    const slides = document.querySelectorAll('#about-slider .slide');
+    if (slides.length > 0) {
+        let currentSlide = 0;
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 3000);
+    }
 });

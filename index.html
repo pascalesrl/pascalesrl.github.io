@@ -24,7 +24,14 @@
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <div class="nav-container">
+        <div class="navbar-top-info" id="navbar-top-info">
+            <div class="top-info-container">
+                <span class="info-item"><i data-lucide="mail"></i> pascalesrl@gmail.com</span>
+                <span class="info-item"><i data-lucide="phone"></i> 081/8590027</span>
+                <span class="info-item hide-mobile"><i data-lucide="clock"></i> Lun-Ven: 8-13, 14-17 | Sab: 8-13</span>
+            </div>
+        </div>
+        <div class="nav-container navbar-main-content">
             <a href="#" class="brand-logo">
                 <img src="foto/logo completo.png" alt="Pascale SRL Logo" class="logo-img">
             </a>
@@ -65,7 +72,19 @@
     <section id="about" class="about-section">
         <div class="container section-grid">
             <div class="about-image-wrapper reveal-slide-left">
-                <img src="public/azienda.jpeg" alt="Pascale SRL Sede" class="about-img main-img">
+                <div class="about-slider" id="about-slider">
+                    <img src="public/pallet/PALLET 120X100 ORTOFRUTTA_edit.png" alt="Pallet Ortofrutta"
+                        class="about-img main-img slide active">
+                    <img src="public/pallet/PALLET 120X100 PERIMETRALE_edit.png" alt="Pallet Perimetrale"
+                        class="about-img main-img slide">
+                    <img src="public/pallet/PALLET 120X80_edit.png" alt="Pallet 120x80"
+                        class="about-img main-img slide">
+                    <img src="public/pallet/PALLET 2 VIE MAGAZZINO_edit.png" alt="Pallet Magazzino"
+                        class="about-img main-img slide">
+                    <img src="public/pallet/PALLET 2 VIE REVERSIBILE_edit.png" alt="Pallet Reversibile"
+                        class="about-img main-img slide">
+                    <img src="public/pallet/STRINKER_edit.png" alt="Pallet Americano" class="about-img main-img slide">
+                </div>
                 <div class="experience-badge">
                     <span class="number">20+</span>
                     <span class="text">Anni di<br>Eccellenza</span>
@@ -98,146 +117,139 @@
     </section>
 
     <!-- Products Section -->
-    <section id="products" class="products-section bg-light">
+    <section id="products" class="products-section"
+        style="background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)), url('public/tronchi.jpg') center/cover fixed; color: var(--white);">
         <div class="container">
             <div class="section-header reveal-fade">
-                <h2 class="section-title text-center">I Nostri Prodotti</h2>
-                <p class="text-center">Soluzioni in legno progettate per la massima resistenza e affidabilità.</p>
+                <h2 class="section-title text-center" style="color: var(--white);">I Nostri Prodotti</h2>
+                <p class="text-center" style="color: #ccc;">Si producono pallet a 2 e 4 vie, disponibili in
+                    diverse dimensioni e personalizzabili in base alle specifiche esigenze del cliente.</p>
             </div>
 
-            <div class="product-category reveal-fade">
-                <h3 class="category-title">Pallet 2 Vie</h3>
-                <div class="services-grid">
-                    <!-- 2 vie magazzino -->
-                    <div class="service-card">
-                        <div class="card-image">
-                            <img src="public/pallet/PALLET 2 VIE MAGAZZINO_edit.png" alt="Pallet 2 Vie Magazzino">
-                        </div>
-                        <div class="card-content">
-                            <h3>2 Vie Magazzino</h3>
-                        </div>
+            <div class="services-grid reveal-fade">
+                <!-- 2 vie link -->
+                <a href="pallet2vie.html" class="service-card" style="display: block; cursor: pointer;">
+                    <div class="card-image">
+                        <img src="public/pallet/PALLET 2 VIE MAGAZZINO_edit.png" alt="Pallet 2 Vie">
                     </div>
-                    <!-- 2 vie reversibile -->
-                    <div class="service-card">
-                        <div class="card-image">
-                            <img src="public/pallet/PALLET 2 VIE REVERSIBILE_edit.png" alt="Pallet 2 Vie Reversibile">
-                        </div>
-                        <div class="card-content">
-                            <h3>2 Vie Reversibile</h3>
-                        </div>
+                    <div class="card-content">
+                        <h3 style="color: var(--text-dark);">Pallet 2 Vie</h3>
+                        <p style="color: var(--text-light);">Clicca per scoprire la nostra gamma di pallet a 2 vie.</p>
                     </div>
-                </div>
-            </div>
+                </a>
 
-            <div class="product-category reveal-fade delay-1" style="margin-top: 5rem;">
-                <h3 class="category-title">Pallet 4 Vie</h3>
-                <div class="services-grid">
-                    <!-- 120x100 ortofrutta -->
-                    <div class="service-card">
-                        <div class="card-image">
-                            <img src="public/pallet/PALLET 120X100 ORTOFRUTTA_edit.png" alt="Pallet 120x100 Ortofrutta">
-                        </div>
-                        <div class="card-content">
-                            <h3>120x100 Ortofrutta</h3>
-                        </div>
+                <!-- 4 vie link -->
+                <a href="pallet4vie.html" class="service-card" style="display: block; cursor: pointer;">
+                    <div class="card-image">
+                        <img src="public/pallet/PALLET 120X100 ORTOFRUTTA_edit.png" alt="Pallet 4 Vie">
                     </div>
-                    <!-- 120x100 perimetrale -->
-                    <div class="service-card">
-                        <div class="card-image">
-                            <img src="public/pallet/PALLET 120X100 PERIMETRALE_edit.png"
-                                alt="Pallet 120x100 Perimetrale">
-                        </div>
-                        <div class="card-content">
-                            <h3>120x100 Perimetrale</h3>
-                        </div>
+                    <div class="card-content">
+                        <h3 style="color: var(--text-dark);">Pallet 4 Vie</h3>
+                        <p style="color: var(--text-light);">Clicca per scoprire la nostra gamma di pallet a 4 vie.</p>
                     </div>
-                    <!-- 120x80 -->
-                    <div class="service-card">
-                        <div class="card-image">
-                            <img src="public/pallet/PALLET 120X80_edit.png" alt="Pallet 120x80">
-                        </div>
-                        <div class="card-content">
-                            <h3>120x80</h3>
-                        </div>
-                    </div>
-                    <!-- Stinger -->
-                    <div class="service-card">
-                        <div class="card-image">
-                            <img src="public/pallet/STRINKER_edit.png" alt="Pallet Americano Stinger">
-                        </div>
-                        <div class="card-content">
-                            <h3>Pallet Americano (Stinger)</h3>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Certifications Section -->
-    <section id="certifications" class="certifications-section">
-        <div class="container section-grid">
-            <div class="cert-text reveal-slide-left">
+    <section id="certifications" class="certifications-section bg-light">
+        <div class="container">
+            <div class="section-header text-center reveal-fade">
                 <h2 class="section-title">Certificazioni e conformità</h2>
                 <p>Operiamo nel rispetto delle principali normative di settore e aderiamo ai consorzi che promuovono la
-                    gestione sostenibile degli pallet in legno. Le nostre certificazioni attestano l’impegno verso
+                    gestione sostenibile del pallet in legno. Le nostre certificazioni attestano l’impegno verso
                     qualità, sicurezza e rispetto ambientale lungo tutta la filiera produttiva.</p>
-                <p>Tra queste:</p>
-                <ul class="cert-list">
-                    <li>
-                        <div class="icon-box-small"><i data-lucide="check-circle"></i></div>
-                        <div>
-                            <strong>Il marchio FITOK</strong>
-                            <p>Garantisce il trattamento fitosanitario del pallet in legno secondo lo standard
-                                ISPM-15.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icon-box-small"><i data-lucide="recycle"></i></div>
-                        <div>
-                            <strong>L’adesione a Rilegno</strong>
-                            <p>Per il recupero e riciclo del legno.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icon-box-small"><i data-lucide="package-check"></i></div>
-                        <div>
-                            <strong>La partecipazione al sistema CONAI</strong>
-                            <p>Per la gestione degli imballaggi.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icon-box-small"><i data-lucide="tree-pine"></i></div>
-                        <div>
-                            <strong>La collaborazione con Conlegno</strong>
-                            <p>Per la valorizzazione della filiera del legno.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="icon-box-small"><i data-lucide="award"></i></div>
-                        <div>
-                            <strong>L’appartenenza alla filiera del legno</strong>
-                            <p>Garantisce una gestione sostenibile e tracciata del ciclo di vita del legno.</p>
-                        </div>
-                    </li>
-                </ul>
             </div>
-            <div class="cert-logos reveal-slide-right">
-                <div class="logos-grid">
-                    <div class="logo-item" title="FITOK">
+
+            <div class="certifications-list">
+                <!-- FITOK -->
+                <div class="cert-card reveal-slide-left">
+                    <div class="cert-card-img">
                         <img src="public/certificazioni/fitok-LOGO.png" alt="FITOK Logo">
                     </div>
-                    <div class="logo-item" title="Rilegno">
-                        <img src="public/certificazioni/Rilegno-logo-verticale.jpg" alt="Rilegno Logo">
+                    <div class="cert-card-text">
+                        <h3>Il marchio FITOK</h3>
+                        <p>L'accreditamento FITOK conferma che i nostri prodotti in legno rispettano rigorosamente le
+                            direttive del sistema fitosanitario in accordo allo standard globale ISPM-15.</p>
+                        <h4>Perché è fondamentale:</h4>
+                        <ul>
+                            <li><strong>Garanzia Sanitaria:</strong> La marcatura FITOK assicura che il legno da noi
+                                fornito venga trattato internazionalmente per schermare l'ambiente da potenziali
+                                parassiti legati all'export.</li>
+                            <li><strong>Libero Scambio Globale:</strong> Essere in possesso di questo requisito apre le
+                                porte al mercato estero, dal momento che la stragrande maggioranza delle nazioni esige
+                                imballaggi a norma ISPM-15.</li>
+                        </ul>
                     </div>
-                    <div class="logo-item" title="CONAI">
+                </div>
+
+                <!-- CONAI -->
+                <div class="cert-card reveal-slide-right delay-1">
+                    <div class="cert-card-img">
                         <img src="public/certificazioni/logo-conai-2019@2x.png" alt="CONAI Logo">
                     </div>
-                    <div class="logo-item" title="Conlegno">
+                    <div class="cert-card-text">
+                        <h3>L'affiliazione CONAI</h3>
+                        <p>Il CONAI, o Consorzio Nazionale Imballaggi, unisce in modo virtuoso la filiera di produttori
+                            e utilizzatori col comune intento di implementare soluzioni concrete per il riciclo dei
+                            materiali usati.</p>
+                        <h4>Perché è fondamentale:</h4>
+                        <ul>
+                            <li><strong>Consapevolezza Ecologica:</strong> Militare tra le fila del CONAI attesta la
+                                nostra sincera dedizione all'abbattimento degli sprechi fisici e del carico ambientale
+                                legato agli smaltimenti.</li>
+                            <li><strong>Allineamento Giuridico:</strong> Far parte del Consorzio ci impone la severa
+                                osservanza di tutte le regolamentazioni nazionali in materia di rifiuti da imballo,
+                                tutelando la nostra affidabilità commerciale.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Rilegno -->
+                <div class="cert-card reveal-slide-left delay-2">
+                    <div class="cert-card-img">
+                        <img src="public/certificazioni/Rilegno-logo-verticale.jpg" alt="Rilegno Logo">
+                    </div>
+                    <div class="cert-card-text">
+                        <h3>Adesione a Rilegno</h3>
+                        <p>La rete consortile Rilegno supervisiona su scala nazionale i cicli di intercettazione,
+                            raccolta e rigenerazione di tutte le componenti legnose usate nel comparto packaging.</p>
+                        <h4>Perché è fondamentale:</h4>
+                        <ul>
+                            <li><strong>Supporto all'Economia Circolare:</strong> La partnership con Rilegno innesca un
+                                sistema virtuoso dove la "fine vita" del bancale dà origine a nuovi composti materici
+                                anziché a deforestazione indotta.</li>
+                            <li><strong>Protezione Boschiva:</strong> Tale impegno documentato è l'espressione diretta
+                                della nostra lotta al depauperamento degli ecosistemi boschivi e agli sprechi ambientali
+                                incontrollati.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Conlegno -->
+                <div class="cert-card reveal-slide-right delay-1">
+                    <div class="cert-card-img">
                         <img src="public/certificazioni/conlegno_news.jpg" alt="Conlegno Logo">
                     </div>
-                    <div class="logo-item" title="Filiera Legno">
+                    <div class="cert-card-text">
+                        <h3>Certificazione Conlegno</h3>
+                        <p>La cooperazione ufficiale e continuativa con l'ente Conlegno pone basi solidissime per
+                            accertare l'efficienza costruttiva, l'alta qualità e il rispetto rigoroso dei parametri
+                            operativi su tutto il territorio lavorativo.</p>
+                    </div>
+                </div>
+
+                <!-- Filiera del Legno -->
+                <div class="cert-card reveal-slide-left delay-2">
+                    <div class="cert-card-img">
                         <img src="public/certificazioni/filiera_legno_logo.jpg" alt="Filiera Legno Logo">
+                    </div>
+                    <div class="cert-card-text">
+                        <h3>Tracciabilità Filiera del Legno</h3>
+                        <p>Inserendoci a pieno titolo in questa cornice programmatica, consolidiamo pratiche trasparenti
+                            sul piano della logistica documentale e assicuriamo la bontà della filiera del ciclo
+                            produttivo complessivo.</p>
                     </div>
                 </div>
             </div>
@@ -316,6 +328,14 @@
                     <button type="submit" class="btn btn-primary btn-block">Invia Richiesta</button>
                 </form>
             </div>
+        </div>
+
+        <!-- Mappa PASCALE SRL -->
+        <div class="container reveal-fade" style="margin-top: 4rem;">
+            <iframe width="100%" height="450" frameborder="0"
+                style="border:0; border-radius: 8px; box-shadow: var(--shadow-lg);"
+                src="https://maps.google.com/maps?q=Pascale%20SRL,%20Scafati&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                allowfullscreen loading="lazy"></iframe>
         </div>
     </section>
 
