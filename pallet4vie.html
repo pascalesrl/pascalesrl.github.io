@@ -9,7 +9,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="foto/logo completo.png">
     <!-- Fallback for unsupported browsers icon -->
@@ -49,8 +51,9 @@
     <section class="products-section bg-light" style="padding-top: 150px; min-height: 80vh;">
         <div class="container">
             <div class="section-header reveal-fade">
-                <h2 class="section-title text-center">Pallet 4 Vie</h2>
-                <p class="text-center">Scopri la nostra gamma di pallet a 4 vie per ogni esigenza logistica.</p>
+                <h2 class="section-title text-center">PALLET 4 VIE</h2>
+                <p class="text-center">Si producono pallet a 4 vie, disponibili in diverse dimensioni e personalizzabili
+                    in base alle specifiche esigenze del cliente.</p>
             </div>
 
             <div class="services-grid">
@@ -60,8 +63,10 @@
                         <img src="public/pallet/PALLET 120X100 ORTOFRUTTA_edit.png" alt="Pallet 120x100 Ortofrutta">
                     </div>
                     <div class="card-content">
-                        <h3>PALLET A 4 VIE</h3>
-                        <p>Dotato di una solida piattaforma superiore, questo modello è specificatamente pensato per l'utilizzo agibile tramite transpallet e carrelli elevatori da tutti e quattro i lati, massimizzando la manovrabilità logistica.</p>
+                        <h3>PALLET A 4 VIE (Leggero)</h3>
+                        <p>Presenta un doppio livello dove il piano principale di carico e quello di scorrimento sono
+                            costruiti con elementi di sezioni differenziate. Questo accorgimento lo rende
+                            eccezionalmente maneggevole e rapido per l'uso quotidiano.</p>
                     </div>
                 </div>
                 <!-- 4 vie americano / stinger -->
@@ -71,7 +76,9 @@
                     </div>
                     <div class="card-content">
                         <h3>PALLET A 4 VIE AMERICANO</h3>
-                        <p>Caratterizzato da una struttura d'appoggio superiore robusta e da un design delle traverse che subisce speciali lavorazioni. Grazie a specifiche asolature, la struttura diventa inforcabile comodamente da ogni angolazione.</p>
+                        <p>Caratterizzato da una struttura d'appoggio superiore robusta e da un design delle traverse
+                            che subisce speciali lavorazioni. Grazie a specifiche asolature, la struttura diventa
+                            inforcabile comodamente da ogni angolazione.</p>
                     </div>
                 </div>
                 <!-- 4 vie perimetrale -->
@@ -81,7 +88,9 @@
                     </div>
                     <div class="card-content">
                         <h3>PALLET A 4 VIE PERIMETRALE</h3>
-                        <p>Sviluppato con una base di supporto superiore ed una resistente cornice inferiore continua a perimetro. Questa speciale base conferisce al prodotto un livello di stabilità e un bilanciamento dei pesi a terra eccellenti.</p>
+                        <p>Sviluppato con una base di supporto superiore ed una resistente cornice inferiore continua a
+                            perimetro. Questa speciale base conferisce al prodotto un livello di stabilità e un
+                            bilanciamento dei pesi a terra eccellenti.</p>
                     </div>
                 </div>
                 <!-- 4 vie leggero / 120x80 -->
@@ -90,10 +99,45 @@
                         <img src="public/pallet/PALLET 120X80_edit.png" alt="Pallet 120x80">
                     </div>
                     <div class="card-content">
-                        <h3>PALLET A 4 VIE LEGGERO</h3>
-                        <p>Presenta un doppio livello dove il piano principale di carico e quello di scorrimento sono costruiti con elementi di sezioni differenziate. Questo accorgimento lo rende eccezionalmente maneggevole e rapido per l'uso quotidiano.</p>
+                        <h3>PALLET A 4 VIE</h3>
+                        <p>Dotato di una solida piattaforma superiore, questo modello è specificatamente pensato per
+                            l'utilizzo agibile tramite transpallet e carrelli elevatori da tutti e quattro i lati,
+                            massimizzando la manovrabilità logistica.</p>
                     </div>
                 </div>
+            </div>
+
+            <div class="contact-form-wrapper reveal-slide-right" style="max-width: 500px; margin: 4rem auto 0 auto;">
+                <form class="contact-form" action="#" method="POST"
+                    onsubmit="event.preventDefault(); alert('Messaggio inviato! Grazie per averci contattato.');">
+                    <h4 class="section-subtitle text-center" style="font-weight: bold;">Richiedi un preventivo</h4>
+                    <div class="form-group">
+                        <label for="name">Nome / Azienda</label>
+                        <input type="text" id="name" name="name" required
+                            placeholder="Inserisci il tuo nome o ragione sociale">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Interessato a:</label>
+                        <select id="service" name="service">
+                            <option value="2-vie">Pallet 2 Vie</option>
+                            <option value="4-vie">Pallet 2 Vie Reversibile</option>
+                            <option value="stinger">Pallet 4 Vie Leggero</option>
+                            <option value="stinger">Pallet 4 Vie Americano</option>
+                            <option value="stinger">Pallet 4 Vie Perimetrale</option>
+                            <option value="stinger">Pallet 4 Vie</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Messaggio</label>
+                        <textarea id="message" name="message" rows="4" required
+                            placeholder="Descrivi brevemente le tue necessità..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Invia Richiesta</button>
+                </form>
             </div>
 
             <div class="text-center" style="margin-top: 3rem;">
@@ -141,4 +185,5 @@
     <!-- Initialize Icons and Animations -->
     <script src="js/main.js"></script>
 </body>
+
 </html>
