@@ -566,6 +566,50 @@ section {
     top: -2px;
 }
 
+.cert-sector {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--bg-light);
+    border-left: 3px solid var(--primary);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.cert-sector strong {
+    color: var(--primary-dark);
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1.25rem;
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: var(--white) !important;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: var(--transition);
+    border: none;
+    box-shadow: 0 2px 8px rgba(230, 81, 0, 0.2);
+}
+
+.btn-download:hover {
+    background-color: var(--primary-dark);
+    color: var(--white) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(163, 57, 0, 0.3);
+}
+
+.btn-download i {
+    width: 18px;
+    height: 18px;
+}
+
 /* Services / Products Section */
 .section-header {
     margin-bottom: 4rem;
